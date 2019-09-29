@@ -1,0 +1,4 @@
+# keyboad stting
+'''
+sudo dpkg-reconfigure keyboard-configuration
+'''
