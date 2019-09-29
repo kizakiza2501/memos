@@ -2,9 +2,9 @@
 
 
 # 日本語キーボード設定
-'''
+```
 sudo dpkg-reconfigure keyboard-configuration
-'''
+```
 
 # 日本語入力
  - 念のためまずapt-getのアップデートを行います
@@ -14,17 +14,19 @@ sudo apt-get upgrade
 ```
 
  - 言語パックやibus-mozcのインストール、日本語ロケールの設定
-'''
+```
 sudo apt-get install language-pack-ja
 sudo apt-get install ibus-mozc
 sudo update-locale LANG=ja_JP.UTF-8
-'''
+```
 
  - 言語サポートを起動し、IBusをIMシステムとして選択
+```
 ここで言語サポートが起動するようになりますが、「言語サポートが完全にはインストールされていません」のメッセージが出ます。
 「インストール」を選択すると、「すべての言語サポートがインストールできません」のメッセージが続くので、Closeします。
 「You are not allowed to perform this action」のメッセージもClose。
 そして、画面下方にある「キーボード入力に使うIMシステム」を「IBus」にしてClose。
+```
 
  - IBusデーモンを自動起動するように設定
 ```
@@ -42,12 +44,14 @@ export QT_IM_MODULE=ibus
 ```
 
  - IBusの設定
+```
 アプリーションーIBusの設定ーInput Methodのタブを選択。
 GeneralのタブでKeyboard Shortcutsを設定しますが、Control + Spaceにすると、切り替え時にスペースが連打されて切り替わらない現象が起こったので、自分はControl + Alt + Spaceにしました。
 Input Methodのタブを選択し、Addボタンを押します。
 ここで表示される選択肢の中で日本語-Mozcを見つけて選択し、Add、Closeします。
 (ただの「日本語」を選択しても動作しないのでMozcがついたものを選択してください。最初はMozcの選択肢が表示されず、試行錯誤のうちようやく出てきたものを選択してうまく行ったので、これまでの手順を順調にこなしても表示されない可能性があります。何かのタイミングで表示されるように感じてしまいましたが、再起動等試してみてください)
 設定完了後画面右上のユーザー名の隣にAまたはENになっているアイコンをクリックして日本語-mozcに切り替えます。
+```
 
  # 参考サイト
  - 日本語入力
