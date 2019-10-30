@@ -53,6 +53,18 @@ Input Methodのタブを選択し、Addボタンを押します。
 設定完了後画面右上のユーザー名の隣にAまたはENになっているアイコンをクリックして日本語-mozcに切り替えます。
 ```
 
+ - トラックパッドの無効化
+```
+# トラックパッドOFF
+synclient TouchpadOff=1
+
+# トラックパッド有効
+synclient TouchpadOff=0
+```
+
  # 参考サイト
  - 日本語入力
 http://undecimber.com/wp/2017/12/21/%E7%B6%9Achromebook-flip-c101pa%E3%81%ABlinux%E5%B0%8E%E5%85%A5%E6%9B%B4%E6%96%B0%E4%B8%AD/
+
+ - トラックパッドの無効
+https://linux.just4fun.biz/?Ubuntu/%E3%82%BF%E3%83%83%E3%83%81%E3%83%91%E3%83%83%E3%83%89%E3%82%92%E3%82%AA%E3%83%B3%E3%83%BB%E3%82%AA%E3%83%95%E3%81%99%E3%82%8B%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%BBsynclient
